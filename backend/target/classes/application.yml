@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: content-api
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://121.37.109.0:3306/exam?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 271456172
+knife4j:
+  enable: true
+  documents:
+    - group: Test Group
+      name: My Documents
+      locations: classpath:wiki/*
+  setting:
+    # default lang
+    language: en-US
+    # footer
+    enableFooter: false
+    enableFooterCustom: true
+    footerCustomContent: MIT | [Java 全栈]()
+    # header
+    enableHomeCustom: true
+    homeCustomLocation: classpath:wiki/README.md
+    # models
+    enableSwaggerModels: true
+    swaggerModelName: My Models

@@ -1,0 +1,151 @@
+[2024/03/23 11:14:44] ppocr INFO: Architecture : 
+[2024/03/23 11:14:44] ppocr INFO:     Backbone : 
+[2024/03/23 11:14:44] ppocr INFO:         name : PPLCNetV3
+[2024/03/23 11:14:44] ppocr INFO:         scale : 0.95
+[2024/03/23 11:14:44] ppocr INFO:     Head : 
+[2024/03/23 11:14:44] ppocr INFO:         head_list : 
+[2024/03/23 11:14:44] ppocr INFO:             CTCHead : 
+[2024/03/23 11:14:44] ppocr INFO:                 Head : 
+[2024/03/23 11:14:44] ppocr INFO:                     fc_decay : 1e-05
+[2024/03/23 11:14:44] ppocr INFO:                 Neck : 
+[2024/03/23 11:14:44] ppocr INFO:                     depth : 2
+[2024/03/23 11:14:44] ppocr INFO:                     dims : 120
+[2024/03/23 11:14:44] ppocr INFO:                     hidden_dims : 120
+[2024/03/23 11:14:44] ppocr INFO:                     kernel_size : [1, 3]
+[2024/03/23 11:14:44] ppocr INFO:                     name : svtr
+[2024/03/23 11:14:44] ppocr INFO:                     use_guide : True
+[2024/03/23 11:14:44] ppocr INFO:             NRTRHead : 
+[2024/03/23 11:14:44] ppocr INFO:                 max_text_length : 25
+[2024/03/23 11:14:44] ppocr INFO:                 nrtr_dim : 384
+[2024/03/23 11:14:44] ppocr INFO:         name : MultiHead
+[2024/03/23 11:14:44] ppocr INFO:     Transform : None
+[2024/03/23 11:14:44] ppocr INFO:     algorithm : SVTR_LCNet
+[2024/03/23 11:14:44] ppocr INFO:     model_type : rec
+[2024/03/23 11:14:44] ppocr INFO: Eval : 
+[2024/03/23 11:14:44] ppocr INFO:     dataset : 
+[2024/03/23 11:14:44] ppocr INFO:         data_dir : /home/aistudio/data/DataForCompetitor/
+[2024/03/23 11:14:44] ppocr INFO:         label_file_list : ['/home/aistudio/data/DataForCompetitor/train_label.txt']
+[2024/03/23 11:14:44] ppocr INFO:         name : SimpleDataSet
+[2024/03/23 11:14:44] ppocr INFO:         transforms : 
+[2024/03/23 11:14:44] ppocr INFO:             DecodeImage : 
+[2024/03/23 11:14:44] ppocr INFO:                 channel_first : False
+[2024/03/23 11:14:44] ppocr INFO:                 img_mode : BGR
+[2024/03/23 11:14:44] ppocr INFO:             MultiLabelEncode : 
+[2024/03/23 11:14:44] ppocr INFO:                 gtc_encode : NRTRLabelEncode
+[2024/03/23 11:14:44] ppocr INFO:             RecResizeImg : 
+[2024/03/23 11:14:44] ppocr INFO:                 image_shape : [3, 48, 320]
+[2024/03/23 11:14:44] ppocr INFO:             KeepKeys : 
+[2024/03/23 11:14:44] ppocr INFO:                 keep_keys : ['image', 'label_ctc', 'label_gtc', 'length', 'valid_ratio']
+[2024/03/23 11:14:44] ppocr INFO:     loader : 
+[2024/03/23 11:14:44] ppocr INFO:         batch_size_per_card : 128
+[2024/03/23 11:14:44] ppocr INFO:         drop_last : False
+[2024/03/23 11:14:44] ppocr INFO:         num_workers : 4
+[2024/03/23 11:14:44] ppocr INFO:         shuffle : False
+[2024/03/23 11:14:44] ppocr INFO: Global : 
+[2024/03/23 11:14:44] ppocr INFO:     cal_metric_during_train : True
+[2024/03/23 11:14:44] ppocr INFO:     character_dict_path : ppocr/utils/ppocr_keys_v1.txt
+[2024/03/23 11:14:44] ppocr INFO:     checkpoints : None
+[2024/03/23 11:14:44] ppocr INFO:     debug : False
+[2024/03/23 11:14:44] ppocr INFO:     distributed : False
+[2024/03/23 11:14:44] ppocr INFO:     epoch_num : 50
+[2024/03/23 11:14:44] ppocr INFO:     eval_batch_step : [0, 2000]
+[2024/03/23 11:14:44] ppocr INFO:     infer_img : doc/imgs_words/ch/word_1.jpg
+[2024/03/23 11:14:44] ppocr INFO:     infer_mode : False
+[2024/03/23 11:14:44] ppocr INFO:     log_smooth_window : 20
+[2024/03/23 11:14:44] ppocr INFO:     max_text_length : 25
+[2024/03/23 11:14:44] ppocr INFO:     pretrained_model : /home/aistudio/ch_PP-OCRv4_rec_train/student.pdparams
+[2024/03/23 11:14:44] ppocr INFO:     print_batch_step : 10
+[2024/03/23 11:14:44] ppocr INFO:     save_epoch_step : 10
+[2024/03/23 11:14:44] ppocr INFO:     save_inference_dir : None
+[2024/03/23 11:14:44] ppocr INFO:     save_model_dir : ./output/rec_ppocr_v4
+[2024/03/23 11:14:44] ppocr INFO:     save_res_path : ./output/rec/predicts_ppocrv3.txt
+[2024/03/23 11:14:44] ppocr INFO:     use_gpu : True
+[2024/03/23 11:14:44] ppocr INFO:     use_space_char : True
+[2024/03/23 11:14:44] ppocr INFO:     use_visualdl : False
+[2024/03/23 11:14:44] ppocr INFO: Loss : 
+[2024/03/23 11:14:44] ppocr INFO:     loss_config_list : 
+[2024/03/23 11:14:44] ppocr INFO:         CTCLoss : None
+[2024/03/23 11:14:44] ppocr INFO:         NRTRLoss : None
+[2024/03/23 11:14:44] ppocr INFO:     name : MultiLoss
+[2024/03/23 11:14:44] ppocr INFO: Metric : 
+[2024/03/23 11:14:44] ppocr INFO:     main_indicator : acc
+[2024/03/23 11:14:44] ppocr INFO:     name : RecMetric
+[2024/03/23 11:14:44] ppocr INFO: Optimizer : 
+[2024/03/23 11:14:44] ppocr INFO:     beta1 : 0.9
+[2024/03/23 11:14:44] ppocr INFO:     beta2 : 0.999
+[2024/03/23 11:14:44] ppocr INFO:     lr : 
+[2024/03/23 11:14:44] ppocr INFO:         learning_rate : 0.0001
+[2024/03/23 11:14:44] ppocr INFO:         name : Cosine
+[2024/03/23 11:14:44] ppocr INFO:         warmup_epoch : 5
+[2024/03/23 11:14:44] ppocr INFO:     name : Adam
+[2024/03/23 11:14:44] ppocr INFO:     regularizer : 
+[2024/03/23 11:14:44] ppocr INFO:         factor : 3e-05
+[2024/03/23 11:14:44] ppocr INFO:         name : L2
+[2024/03/23 11:14:44] ppocr INFO: PostProcess : 
+[2024/03/23 11:14:44] ppocr INFO:     name : CTCLabelDecode
+[2024/03/23 11:14:44] ppocr INFO: Train : 
+[2024/03/23 11:14:44] ppocr INFO:     dataset : 
+[2024/03/23 11:14:44] ppocr INFO:         data_dir : /home/aistudio/data/DataForCompetitor/
+[2024/03/23 11:14:44] ppocr INFO:         ds_width : False
+[2024/03/23 11:14:44] ppocr INFO:         ext_op_transform_idx : 1
+[2024/03/23 11:14:44] ppocr INFO:         label_file_list : ['/home/aistudio/data/DataForCompetitor/train_label.txt']
+[2024/03/23 11:14:44] ppocr INFO:         name : MultiScaleDataSet
+[2024/03/23 11:14:44] ppocr INFO:         transforms : 
+[2024/03/23 11:14:44] ppocr INFO:             DecodeImage : 
+[2024/03/23 11:14:44] ppocr INFO:                 channel_first : False
+[2024/03/23 11:14:44] ppocr INFO:                 img_mode : BGR
+[2024/03/23 11:14:44] ppocr INFO:             RecConAug : 
+[2024/03/23 11:14:44] ppocr INFO:                 ext_data_num : 2
+[2024/03/23 11:14:44] ppocr INFO:                 image_shape : [48, 320, 3]
+[2024/03/23 11:14:44] ppocr INFO:                 max_text_length : 25
+[2024/03/23 11:14:44] ppocr INFO:                 prob : 0.5
+[2024/03/23 11:14:44] ppocr INFO:             RecAug : None
+[2024/03/23 11:14:44] ppocr INFO:             MultiLabelEncode : 
+[2024/03/23 11:14:44] ppocr INFO:                 gtc_encode : NRTRLabelEncode
+[2024/03/23 11:14:44] ppocr INFO:             KeepKeys : 
+[2024/03/23 11:14:44] ppocr INFO:                 keep_keys : ['image', 'label_ctc', 'label_gtc', 'length', 'valid_ratio']
+[2024/03/23 11:14:44] ppocr INFO:     loader : 
+[2024/03/23 11:14:44] ppocr INFO:         batch_size_per_card : 192
+[2024/03/23 11:14:44] ppocr INFO:         drop_last : True
+[2024/03/23 11:14:44] ppocr INFO:         num_workers : 8
+[2024/03/23 11:14:44] ppocr INFO:         shuffle : True
+[2024/03/23 11:14:44] ppocr INFO:     sampler : 
+[2024/03/23 11:14:44] ppocr INFO:         divided_factor : [8, 16]
+[2024/03/23 11:14:44] ppocr INFO:         first_bs : 192
+[2024/03/23 11:14:44] ppocr INFO:         fix_bs : False
+[2024/03/23 11:14:44] ppocr INFO:         is_training : True
+[2024/03/23 11:14:44] ppocr INFO:         name : MultiScaleSampler
+[2024/03/23 11:14:44] ppocr INFO:         scales : [[320, 32], [320, 48], [320, 64]]
+[2024/03/23 11:14:44] ppocr INFO: profiler_options : None
+[2024/03/23 11:14:44] ppocr INFO: train with paddle 2.6.0 and device Place(gpu:0)
+[2024/03/23 11:14:44] ppocr INFO: Initialize indexs of datasets:['/home/aistudio/data/DataForCompetitor/train_label.txt']
+[2024/03/23 11:14:45] ppocr INFO: Initialize indexs of datasets:['/home/aistudio/data/DataForCompetitor/train_label.txt']
+[2024/03/23 11:14:51] ppocr INFO: train dataloader has 885 iters
+[2024/03/23 11:14:51] ppocr INFO: valid dataloader has 957 iters
+[2024/03/23 11:14:51] ppocr INFO: load pretrain successful from /home/aistudio/ch_PP-OCRv4_rec_train/student
+[2024/03/23 11:14:51] ppocr INFO: During the training process, after the 0th iteration, an evaluation is run every 2000 iterations
+[2024/03/23 11:15:09] ppocr INFO: epoch: [1/50], global_step: 10, lr: 0.000000, acc: 0.049479, norm_edit_dis: 0.383044, CTCLoss: 26.724203, NRTRLoss: 3.551302, loss: 30.104675, avg_reader_cost: 0.29450 s, avg_batch_cost: 1.75447 s, avg_samples: 147.2, ips: 83.90010 samples/s, eta: 21:33:37
+[2024/03/23 11:15:20] ppocr INFO: epoch: [1/50], global_step: 20, lr: 0.000000, acc: 0.042969, norm_edit_dis: 0.366628, CTCLoss: 28.359971, NRTRLoss: 3.551302, loss: 31.825005, avg_reader_cost: 0.00046 s, avg_batch_cost: 1.08414 s, avg_samples: 140.8, ips: 129.87211 samples/s, eta: 17:26:15
+[2024/03/23 11:15:31] ppocr INFO: epoch: [1/50], global_step: 30, lr: 0.000000, acc: 0.039062, norm_edit_dis: 0.355256, CTCLoss: 30.936671, NRTRLoss: 3.577980, loss: 34.533617, avg_reader_cost: 0.00041 s, avg_batch_cost: 1.08983 s, avg_samples: 140.8, ips: 129.19411 samples/s, eta: 16:05:05
+[2024/03/23 11:15:42] ppocr INFO: epoch: [1/50], global_step: 40, lr: 0.000001, acc: 0.041667, norm_edit_dis: 0.366020, CTCLoss: 28.678231, NRTRLoss: 3.471456, loss: 32.059038, avg_reader_cost: 0.00037 s, avg_batch_cost: 1.09603 s, avg_samples: 144.0, ips: 131.38322 samples/s, eta: 15:25:33
+[2024/03/23 11:15:52] ppocr INFO: epoch: [1/50], global_step: 50, lr: 0.000001, acc: 0.052083, norm_edit_dis: 0.363813, CTCLoss: 28.181879, NRTRLoss: 3.462009, loss: 31.749601, avg_reader_cost: 0.00040 s, avg_batch_cost: 1.06687 s, avg_samples: 124.8, ips: 116.97728 samples/s, eta: 14:57:27
+[2024/03/23 11:16:03] ppocr INFO: epoch: [1/50], global_step: 60, lr: 0.000001, acc: 0.046875, norm_edit_dis: 0.341469, CTCLoss: 30.125064, NRTRLoss: 3.646959, loss: 33.708261, avg_reader_cost: 0.00038 s, avg_batch_cost: 1.06359 s, avg_samples: 121.6, ips: 114.33017 samples/s, eta: 14:38:16
+[2024/03/23 11:16:14] ppocr INFO: epoch: [1/50], global_step: 70, lr: 0.000001, acc: 0.031250, norm_edit_dis: 0.362470, CTCLoss: 30.280837, NRTRLoss: 3.616183, loss: 33.932888, avg_reader_cost: 0.00039 s, avg_batch_cost: 1.07426 s, avg_samples: 131.2, ips: 122.13007 samples/s, eta: 14:25:38
+[2024/03/23 11:16:24] ppocr INFO: epoch: [1/50], global_step: 80, lr: 0.000002, acc: 0.041667, norm_edit_dis: 0.384924, CTCLoss: 28.918949, NRTRLoss: 3.600958, loss: 32.494631, avg_reader_cost: 0.00041 s, avg_batch_cost: 1.05811 s, avg_samples: 121.6, ips: 114.92161 samples/s, eta: 14:14:37
+[2024/03/23 11:16:35] ppocr INFO: epoch: [1/50], global_step: 90, lr: 0.000002, acc: 0.044271, norm_edit_dis: 0.370061, CTCLoss: 28.915224, NRTRLoss: 3.573771, loss: 32.504345, avg_reader_cost: 0.00043 s, avg_batch_cost: 1.05698 s, avg_samples: 121.6, ips: 115.04456 samples/s, eta: 14:05:55
+[2024/03/23 11:16:46] ppocr INFO: epoch: [1/50], global_step: 100, lr: 0.000002, acc: 0.044271, norm_edit_dis: 0.362415, CTCLoss: 28.836336, NRTRLoss: 3.556163, loss: 32.457224, avg_reader_cost: 0.00043 s, avg_batch_cost: 1.07203 s, avg_samples: 131.2, ips: 122.38451 samples/s, eta: 14:00:03
+[2024/03/23 11:16:56] ppocr INFO: epoch: [1/50], global_step: 110, lr: 0.000002, acc: 0.039062, norm_edit_dis: 0.375828, CTCLoss: 28.596951, NRTRLoss: 3.472232, loss: 32.030664, avg_reader_cost: 0.00044 s, avg_batch_cost: 1.08241 s, avg_samples: 137.6, ips: 127.12375 samples/s, eta: 13:55:54
+[2024/03/23 11:17:07] ppocr INFO: epoch: [1/50], global_step: 120, lr: 0.000002, acc: 0.046875, norm_edit_dis: 0.379803, CTCLoss: 28.304859, NRTRLoss: 3.421863, loss: 31.925364, avg_reader_cost: 0.00042 s, avg_batch_cost: 1.08171 s, avg_samples: 137.6, ips: 127.20647 samples/s, eta: 13:52:22
+[2024/03/23 11:17:18] ppocr INFO: epoch: [1/50], global_step: 130, lr: 0.000003, acc: 0.054687, norm_edit_dis: 0.375346, CTCLoss: 27.906017, NRTRLoss: 3.414652, loss: 31.354508, avg_reader_cost: 0.00047 s, avg_batch_cost: 1.06517 s, avg_samples: 128.0, ips: 120.16883 samples/s, eta: 13:48:24
+[2024/03/23 11:17:28] ppocr INFO: epoch: [1/50], global_step: 140, lr: 0.000003, acc: 0.049479, norm_edit_dis: 0.408775, CTCLoss: 26.139435, NRTRLoss: 3.290349, loss: 29.429784, avg_reader_cost: 0.00047 s, avg_batch_cost: 1.04355 s, avg_samples: 115.2, ips: 110.39268 samples/s, eta: 13:43:52
+[2024/03/23 11:17:39] ppocr INFO: epoch: [1/50], global_step: 150, lr: 0.000003, acc: 0.065104, norm_edit_dis: 0.427483, CTCLoss: 22.874805, NRTRLoss: 3.219561, loss: 26.094366, avg_reader_cost: 0.00047 s, avg_batch_cost: 1.07591 s, avg_samples: 131.2, ips: 121.94293 samples/s, eta: 13:41:29
+[2024/03/23 11:17:50] ppocr INFO: epoch: [1/50], global_step: 160, lr: 0.000003, acc: 0.065104, norm_edit_dis: 0.413281, CTCLoss: 25.650423, NRTRLoss: 3.230772, loss: 28.980511, avg_reader_cost: 0.00046 s, avg_batch_cost: 1.12088 s, avg_samples: 156.8, ips: 139.89050 samples/s, eta: 13:41:26
+[2024/03/23 11:18:01] ppocr INFO: epoch: [1/50], global_step: 170, lr: 0.000004, acc: 0.062500, norm_edit_dis: 0.420475, CTCLoss: 25.876254, NRTRLoss: 3.262139, loss: 29.130332, avg_reader_cost: 0.00044 s, avg_batch_cost: 1.09009 s, avg_samples: 140.8, ips: 129.16370 samples/s, eta: 13:40:03
+[2024/03/23 11:18:12] ppocr INFO: epoch: [1/50], global_step: 180, lr: 0.000004, acc: 0.069010, norm_edit_dis: 0.433471, CTCLoss: 24.720505, NRTRLoss: 3.234604, loss: 27.879540, avg_reader_cost: 0.00045 s, avg_batch_cost: 1.11149 s, avg_samples: 147.2, ips: 132.43537 samples/s, eta: 13:39:40
+[2024/03/23 11:18:23] ppocr INFO: epoch: [1/50], global_step: 190, lr: 0.000004, acc: 0.062500, norm_edit_dis: 0.426520, CTCLoss: 25.503982, NRTRLoss: 3.244772, loss: 28.755323, avg_reader_cost: 0.00045 s, avg_batch_cost: 1.08109 s, avg_samples: 134.4, ips: 124.31925 samples/s, eta: 13:38:08
+[2024/03/23 11:18:34] ppocr INFO: epoch: [1/50], global_step: 200, lr: 0.000004, acc: 0.070312, norm_edit_dis: 0.434330, CTCLoss: 23.980268, NRTRLoss: 3.194406, loss: 27.228728, avg_reader_cost: 0.00044 s, avg_batch_cost: 1.09383 s, avg_samples: 144.0, ips: 131.64746 samples/s, eta: 13:37:13
+[2024/03/23 11:18:45] ppocr INFO: epoch: [1/50], global_step: 210, lr: 0.000005, acc: 0.078125, norm_edit_dis: 0.460402, CTCLoss: 22.416046, NRTRLoss: 3.059349, loss: 25.436271, avg_reader_cost: 0.00045 s, avg_batch_cost: 1.07862 s, avg_samples: 131.2, ips: 121.63666 samples/s, eta: 13:35:49
+[2024/03/23 11:18:56] ppocr INFO: epoch: [1/50], global_step: 220, lr: 0.000005, acc: 0.078125, norm_edit_dis: 0.452724, CTCLoss: 23.075812, NRTRLoss: 3.087348, loss: 26.172430, avg_reader_cost: 0.00043 s, avg_batch_cost: 1.08363 s, avg_samples: 134.4, ips: 124.02739 samples/s, eta: 13:34:42
+[2024/03/23 11:19:07] ppocr INFO: epoch: [1/50], global_step: 230, lr: 0.000005, acc: 0.072917, norm_edit_dis: 0.455123, CTCLoss: 22.530814, NRTRLoss: 3.117148, loss: 25.647963, avg_reader_cost: 0.00043 s, avg_batch_cost: 1.12726 s, avg_samples: 160.0, ips: 141.93760 samples/s, eta: 13:35:04
+[2024/03/23 11:19:18] ppocr INFO: epoch: [1/50], global_step: 240, lr: 0.000005, acc: 0.062500, norm_edit_dis: 0.441139, CTCLoss: 23.384431, NRTRLoss: 3.169597, loss: 26.492149, avg_reader_cost: 0.00043 s, avg_batch_cost: 1.10134 s, avg_samples: 144.0, ips: 130.74931 samples/s, eta: 13:34:35
+[2024/03/23 11:19:29] ppocr INFO: epoch: [1/50], global_step: 250, lr: 0.000005, acc: 0.062500, norm_edit_dis: 0.440551, CTCLoss: 23.093833, NRTRLoss: 3.142011, loss: 26.233787, avg_reader_cost: 0.00047 s, avg_batch_cost: 1.10480 s, avg_samples: 144.0, ips: 130.34083 samples/s, eta: 13:34:14
