@@ -1,0 +1,43 @@
+
+.content {
+    box-shadow: 0 -3px 7px 2px rgb(180, 180, 180);
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    left: 0;
+    top: -10px;
+}
+
+.content button{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.LogIn{
+    height: 250px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+select{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+}

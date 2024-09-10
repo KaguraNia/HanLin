@@ -1,0 +1,22 @@
+.box{
+    height: 200px;
+}
+
+.box0{
+    height: 50px;
+}
+
+.box0 span{
+    margin: 0 50px;
+}
+
+.img{
+    width: 150px;
+    height: 150px;
+    background-color: #666;
+    margin-left: 80px;
+}
+
+.box1 a{
+    margin-right: 80px;
+}

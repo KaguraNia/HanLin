@@ -1,0 +1,51 @@
+.content button {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input{
+    border: 1px dotted #999;
+    border-radius:5px;
+}
+
+.user {
+    background-color: white;
+}
+
+.notice {
+    background-color: white;
+}
+
+textarea {
+    resize: none;
+    font-size: 24px;
+    border: 1px dotted #999;
+    border-radius:5px;
+}
+
+textarea:invalid {
+    border: 2px dashed black;
+}
+
+textarea:valid {
+    border: 2px solid black;
+}
+
+select{
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #cccccc6d;
+    font-size: 20px;
+}
