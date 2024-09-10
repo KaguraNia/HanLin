@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-notice-bar left-icon="volume-o" color="#1989fa" background="#ecf9ff" text="选择翰林，开启智慧教育新时代！如果您满意翰林的使用体验，请记得打分鼓励一下我们~" />
+  <view class="cccontainer">
+    <view class="userinfo">
+
+      <image src="/images/logo_透明底_原色.png" class="img"></image>
+      <text class="body">翰林</text>
+      <text class="log">微信小程序</text>
+
+    </view>
+  </view>
+  <van-cell-group inset="{{true}}">
+    <van-cell icon="question-o" title="我是谁？" label="我的名字叫翰林，是一款由翰林开发团队设计与开发的基于大模型的智能阅卷应用。" />
+    <van-cell icon="clock-o" title="我的诞生背景？" label="在“大模型+工具平台+生态”三级协同加速产业智能化的浪潮下，行业大模型已成为大势所趋，我应运而生。" />
+    <van-cell icon="passed" title="我有什么优势？" label="通过跨平台双端管理，我能高效、准确、交互式地生成评阅，并可视化学情数据，促进家校一体。" />
+   
+    <van-cell icon="info-o" title="我是怎么做到的？" label="在充分调研用户画像的基础上，我与对点学校进行合作，使用了高达百万级的考试数据集。同时，依托计算机视觉图像分析OCR、LLM语义理解与生成和提示学习技术，并利用大模型的涌现能力辅助Label数据清洗，我实现了高性能与跨平台多用户的易用性。" />
+    <van-cell icon="more-o" title="我的成果与规划？" label="目前，我已申请一项国家发明专利，并对系统进行了小范围部署。在未来，我的团队将推广翰林平台到更多中小学试用，获得一线反馈，并逐步与各大网课机构取得联系，达成商业化合作，以期作为LLM在教育领域获得巨大突破的一个标杆。你的每一份支持，都是我们的动力源泉所在~" />
+  </van-cell-group>
+
+</scroll-view>

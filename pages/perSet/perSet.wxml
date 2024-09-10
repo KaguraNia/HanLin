@@ -1,0 +1,19 @@
+<!--pages/set/set.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-notice-bar left-icon="volume-o" color="#1989fa" background="#ecf9ff" text="订阅以下通知将触发微信服务通知，翰林会陆续更新更多通知，敬请期待~" />
+  <van-cell-group>
+  </van-cell-group>
+  <van-collapse value="{{ activeNames }}">
+    <van-collapse-item title="接收平台通知" name="1" is-link="{{false}}">
+      <view slot="value">
+        <van-switch checked="{{ checked }}" bind:change="onoChange" size="24px" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="接收班级通知" name="2" is-link="{{false}}">
+      <view slot="value">
+        <van-switch checked="{{ checked2 }}" bind:change="onooChange" size="24px" />
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+  <van-button class="Link2" color="#07c160" block>确认</van-button>
+</scroll-view>

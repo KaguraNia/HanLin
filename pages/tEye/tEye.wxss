@@ -1,0 +1,8 @@
+/* pages/tEye/tEye.wxss */
+.a {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

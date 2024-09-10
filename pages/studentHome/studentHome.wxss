@@ -1,0 +1,21 @@
+/* pages/studentHome/studentHome.wxss */
+.button {
+  border: 1px solid #000000;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: '等线';
+  font-size: medium;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}

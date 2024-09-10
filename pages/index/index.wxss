@@ -1,0 +1,106 @@
+.top {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  background: #f1f1f1;
+  font-size: medium;
+  width: 100%;
+  overflow: hidden;
+}
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: '等线';
+  font-size: medium;
+}
+
+.tip {
+  margin-top: 30rpx;
+  padding-right: 220rpx;
+  font-size: 27rpx;
+}
+
+.UL {
+  padding-right: 400rpx;
+  font-size: 30rpx;
+  color: rgb(46, 46, 46);
+  font-weight: 500;
+}
+
+.container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(126, 126, 126);
+  width: 80%;
+}
+
+.loginbutton {
+  border: 1px solid #000000;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.nav {
+  font-family: '等线';
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  font-size: 35rpx;
+  padding-right: 520rpx;
+  padding-top: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.body {
+  font-family: '演示佛系体';
+  color: rgb(0, 0, 0);
+  font-size: 80rpx;
+  font-weight: 600;
+}
+
+.log {
+  font-family: '演示佛系体';
+  color: rgb(0, 0, 0);
+  font-size: 70rpx;
+  padding-right: 200rpx;
+}
+
+.yes {
+  padding-left: 240rpx;
+  font-size: 27rpx;
+  padding-bottom: 50rpx;
+}
+
+.img {
+  width: 100%;
+}
+
+.loginbutton {
+  border: 1px solid #000000;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

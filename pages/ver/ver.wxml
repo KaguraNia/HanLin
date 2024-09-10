@@ -1,0 +1,8 @@
+<!--pages/myInfo/myInfo.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  <van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png" />
+  <van-cell-group>
+    <van-cell title="当前翰林小程序版本" label="v1.0.0" />
+  </van-cell-group>
+</scroll-view>

@@ -1,0 +1,10 @@
+/* pages/set/set.wxss */
+.Link2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}

@@ -1,0 +1,132 @@
+/**index.wxss**/
+.top {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  background: #f1f1f1;
+  font-size: medium;
+  width: 100%;
+  overflow: hidden;
+}
+
+.body {
+  font-family: '演示佛系体';
+  color: rgb(0, 0, 0);
+  font-size: 80rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.body2 {
+  font-family: '三极行楷简体-粗';
+  color: rgb(0, 0, 0);
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-top: 120rpx;
+}
+.log {
+  color: rgb(0, 0, 0);
+  font-size: 40rpx;
+  margin-bottom: 200rpx;
+}
+.cccontainer {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.log {
+  margin-bottom: 100rpx;
+}
+
+
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: '等线';
+  font-size: medium;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 80%;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.nickname-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.nickname-label {
+  width: 105px;
+}
+
+.nickname-input {
+  flex: 1;
+}
+
+.loginbutton {
+  border: 1px solid #000000;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.Link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 12px;
+  margin: 78px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+
+
+

@@ -1,0 +1,23 @@
+<!--pages/studentHome/studentHome.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="gr">
+    <van-cell-group>
+      <van-cell icon="manager-o" title="基本信息" is-link url='/pages/mytInfo/mytInfo' />
+      <van-cell icon="setting-o" title="安全设置" is-link url='/pages/set/set' />
+      <van-cell icon="more-o" title="平台权限" is-link url='/pages/perSet/perSet' />
+      <van-cell icon="upgrade" title="版本信息" is-link url='/pages/ver/ver' />
+      <van-cell icon="smile-comment-o" title="关于我们" is-link url='/pages/about/about' />
+    </van-cell-group>
+  </view>
+  <view class="container">
+    <!-- <button class="button" bindtap="buttonTapHandler">历次成绩统计</button> -->
+    <block>
+      <van-tabbar active="{{ active }}" bind:change="onChange">
+        <van-tabbar-item icon="search" url="../teacherHome/teacherHome">班级通知</van-tabbar-item>
+        <van-tabbar-item icon="home-o" url="../tApp/tApp">应用中心</van-tabbar-item>
+        <van-tabbar-item icon="friends-o" url="../tCenter/tCenter">个人中心</van-tabbar-item>
+      </van-tabbar>
+    </block>
+  </view>
+
+</scroll-view>

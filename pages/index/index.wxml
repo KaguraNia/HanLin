@@ -1,0 +1,18 @@
+<!--pages/index/index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <image src="/images/background.jpg" class="img"></image>
+  <view class="container">
+    <view class="userinfo">
+      <text class="UL">USER LOGIN</text>
+      <block class="logText">
+        <text class="log">登录到<text class="body">翰林</text></text>
+      </block>
+      <text class="tip">请使用翰林统一身份认证登录</text>
+    </view>
+    <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" type="primary" size="large" id="loginButton" bindtap="buttonTapHandlert">进入统一身份验证</van-button>
+  </view>
+  <view class="yes">
+    <van-checkbox bind:change="onChange" value="{{ checked }}" icon-size="10px">我同意翰林服务条例</van-checkbox>
+  </view>
+
+</scroll-view>

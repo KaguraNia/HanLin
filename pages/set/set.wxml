@@ -1,0 +1,8 @@
+<!--pages/set/set.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-cell-group>
+    <van-cell title="修改密码" is-link />
+    <van-cell title="管理第三方授权" is-link />
+  </van-cell-group>
+  <van-button class="Link2" color="#ee0a25" block>取消绑定&退出登录</van-button>
+</scroll-view>

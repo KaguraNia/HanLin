@@ -1,0 +1,9 @@
+<!--pages/updateAI/updateAI.wxml-->
+<van-cell-group>
+  <van-notice-bar left-icon="volume-o" color="#1989fa" background="#ecf9ff" text="通知上传到服务器后，分发给同学们需要一定时间哦，请耐心等待~" />
+  <van-field label="新通知" model:value="{{ value }}" placeholder="请输入通知内容" border="{{ false }}" type="textarea" autosize bind:change="onChange" />
+
+</van-cell-group>
+<view class="a">
+  <van-button type="primary" block bind:click="afterClick">提交</van-button>
+</view>

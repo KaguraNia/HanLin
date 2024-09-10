@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="userinfo">
+      <block class="logText">
+        <image src="/images/logo_透明底_原色.png" class="img"></image>
+        <text class="body">翰林</text>
+        <text class="log">统一身份认证平台</text>
+      </block>
+      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
+        <form action="" onsubmit="submitHandler()">
+          <view class="nickname-wrapper">
+            <text class="nickname-label">账号</text>
+            <input type="text" bindinput="bindKeyInput" data-name="sorterInfo.username" value="{{sorterInfo.username}}" class="nickname-input" bind:change="onInputChange" />
+          </view>
+          <view class="nickname-wrapper">
+            <text class="nickname-label">密码</text>
+            <input type="password" bindinput="bindKeyInput" data-name="sorterInfo.password" value="{{sorterInfo.password}}" class="nickname-input" bind:change="onInputChange" />
+          </view>
+          <view class="nickname-wrapper">
+            <text class="nickname-label">登录身份</text>
+            <view class='select_box'>
+              <view class='select' catchtap='selectTap'>
+                <text class='select_text'>{{selectData[index]}}</text>
+                <image class='select_img {{selectShow&&"select_img_rotate"}}' src='../../images/b2.jpg' background-size="contain"></image>
+              </view>
+              <view class='option_box' style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+                <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="yes">
+            <text class="text-underline">忘记密码？</text>
+          </view>
+          <view class="yes2">
+            <navigator url="/pages/register/register">
+            <text class="text-underline">还没有账号？</text>
+          </navigator> 
+          </view>
+          <button id="loginButton" class="Link" bindtap="buttonTapHandlert">登录</button>
+
+        </form>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view>
+  </view>
+
+</scroll-view>

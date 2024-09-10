@@ -1,0 +1,26 @@
+.cccontainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.aontainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.a {
+  margin-top: 30rpx;
+  padding-bottom: 30rpx;
+  display: block;
+}

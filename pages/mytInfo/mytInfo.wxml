@@ -1,0 +1,15 @@
+<!--pages/myInfo/myInfo.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-notice-bar left-icon="volume-o" color="#1989fa" background="#ecf9ff" text="以下数据来源于翰林用户数据信息中心，不可在微信小程序中编辑" />
+  <van-cell-group>
+    <van-cell title="账号" label="{{username}}" />
+    <van-cell title="身份" label="教师" />
+    <van-cell title="姓名" label="李四" />
+    <van-cell title="性别" label="女" />
+    <van-cell title="地区" label="XX省/XX市" />
+    <van-cell title="学校" label="XX省XX市XX中学" />
+    <van-cell title="所教年级" label="高一" />
+    <van-cell title="所教班级" label="高一五班" />
+    <van-cell title="所教学科" label="数学" />
+  </van-cell-group>
+</scroll-view>

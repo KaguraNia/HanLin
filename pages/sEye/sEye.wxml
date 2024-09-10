@@ -1,0 +1,64 @@
+<!--pages/studentHome/studentHome.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-collapse value="{{ activeNames }}" accordion bind:change="onChange">
+    <van-collapse-item title="历次总成绩" name="1">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas> </view>
+      你在各个学科上都展现出了卓越的能力和深厚的功底，不仅学习扎实，而且能够灵活运用所学知识解决实际问题。同学你怎么这么优秀！再接再厉，继续保持吧~
+      <view class="a">
+        <van-rate readonly value="{{ 5 }}" color="#4bb0ff" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="历次语文成绩" name="2">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas1" disable-scroll="true" class="canvas" bindtouchstart="touchHandler1"></canvas> </view>
+      你的语文功底真是扎实，作文写得文采斐然，每一篇文章都仿佛是一幅精美的画卷，让人陶醉其中。你对古诗词的理解深入骨髓，常常能够巧妙运用在文章中，展现出你深厚的文化底蕴。在文言文方面，你也毫不逊色，无论是阅读还是翻译，你都能够轻松应对，仿佛真的能与古人对话。
+      <view class="a">
+        <van-rate readonly value="{{ 5 }}" color="#4bb0ff" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="历次数学成绩" name="3">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas2" disable-scroll="true" class="canvas" bindtouchstart="touchHandler2"></canvas> </view>
+      你的数学能力真的让人佩服，无论是复杂的几何证明还是繁琐的代数运算，你都能迅速找到解题的关键。你对数学公式的理解不仅仅停留在记忆层面，更能够灵活运用到实际问题中，展现出你强大的逻辑思维和问题解决能力。
+      <view class="a">
+        <van-rate readonly value="{{ 5 }}" color="#4bb0ff" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="历次英语成绩" name="4">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas3" disable-scroll="true" class="canvas" bindtouchstart="touchHandler3"></canvas> </view>
+      你的英语水平真是棒极了，无论是口语表达还是书面写作，你都能够流利自如，充满自信。在课堂上，你总能积极与外教交流，用英语表达自己的观点和看法，简直就像是一个地道的英语母语者。你的词汇量丰富，语法掌握得也相当扎实，真正做到了学以致用。
+      <view class="a">
+        <van-rate readonly value="{{ 5 }}" color="#4bb0ff" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="历次物理成绩" name="5">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas4" disable-scroll="true" class="canvas" bindtouchstart="touchHandler4"></canvas> </view>
+      在物理方面，你的表现同样出色。你能够深入剖析物理现象背后的原理，将抽象的理论知识与具体的实验现象相结合。在实验中，你操作规范，观察细致，总是能够准确记录数据并得出科学的结论。
+      <view class="a">
+        <van-rate readonly value="{{ 5 }}" color="#4bb0ff" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="历次化学成绩" name="6">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas5" disable-scroll="true" class="canvas" bindtouchstart="touchHandler5"></canvas> </view>
+      你的化学成绩也相当优秀，对于化学元素和化学反应的理解深刻而全面。你能够清晰地掌握化学反应的机理和过程，化学实验操作也显得得心应手。更难能可贵的是，你能够将化学知识与日常生活相结合，用化学知识解释生活中的各种现象。
+      <view class="a">
+        <van-rate readonly value="{{ 5 }}" color="#4bb0ff" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="历次生物成绩" name="7">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas6" disable-scroll="true" class="canvas" bindtouchstart="touchHandler6"></canvas> </view>
+      在生物学科上，你也展现出了不凡的实力。你对生物学的各种概念、原理和实验方法都有着深刻的理解和掌握。无论是细胞的结构与功能，还是生物体的遗传与进化，你都能够娓娓道来，如数家珍。你的生物实验操作能力也很强，能够独立完成复杂的实验任务，并得出准确的实验结果。
+      <view class="a">
+        <van-rate readonly value="{{ 5 }}" color="#4bb0ff" />
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="历次历史成绩" name="8">
+      <van-empty image="search" description="无数据" />
+    </van-collapse-item>
+    <van-collapse-item title="历次地理成绩" name="9">
+      <van-empty image="search" description="无数据" />
+    </van-collapse-item>
+    <van-collapse-item title="历次政治成绩" name="10">
+      <van-empty image="search" description="无数据" />
+    </van-collapse-item>
+
+  </van-collapse>
+</scroll-view>

@@ -1,0 +1,11 @@
+<!--pages/all/all.wxml-->
+<van-search value="{{ value }}" placeholder="请输入用户名" />
+
+<view class="gr" wx:for="{{buttonList}}" wx:key="id" data-id="{{item.id}}">
+
+  <van-card desc="{{item.userP}}" title="{{item.userName}}" thumb="../../images/pic.jpg" currency="" tag="{{item.userId}}">
+    <view slot="footer">
+      <van-button size="mini">重置密码</van-button>
+    </view>
+  </van-card>
+</view>

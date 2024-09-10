@@ -1,0 +1,4 @@
+/* pages/testQList/testQList.wxss */
+.img {
+  width: 100%;
+}

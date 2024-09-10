@@ -1,0 +1,22 @@
+<!--pages/studentHome/studentHome.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <block>
+    <image src='http://121.37.109.0:8080/image/img/download?name=paper.jpg' class="img"></image>
+  </block>
+  <view class="gr">
+    <van-cell-group>
+      <van-cell title="第{{rid}}题" size="large" />
+      <van-cell title="题目" label="{{qqL[0].oQ}}" />
+      <van-cell title="回答" label="{{qqL[0].qA}}" />
+      <view id="myComponent">
+        <view wx:if="{{u}}">
+          <van-cell title="AI评语" label="{{qqL[0].aiJR}}" is-link url='/pages/updateAI/updateAI' />
+        </view>
+        <view wx:else>
+          <van-cell title="AI评语" label="{{qqL[0].aiJR}}" />
+        </view>
+      </view>
+    </van-cell-group>
+  </view>
+
+</scroll-view>

@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <image src="/images/background.jpg" class="img"></image>
+  <view class="container">
+    <view class="userinfo">
+      <block>
+        <form action="" onsubmit="submitHandler()">
+          <view class="nickname-wrapper">
+            <text class="nickname-label">账号</text>
+            <input type="text" bindinput="bindKeyInput" data-name="sorterInfo.username" value="{{sorterInfo.username}}" class="nickname-input" bind:change="onInputChange" />
+          </view>
+          <view class="nickname-wrapper">
+            <text class="nickname-label">密码</text>
+            <input type="password" bindinput="bindKeyInput" data-name="sorterInfo.password" value="{{sorterInfo.password}}" class="nickname-input" bind:change="onInputChange" />
+          </view>
+          <view class="nickname-wrapper">
+            <text class="nickname-label">账号类型</text>
+            <view class='select_box'>
+              <view class='select' catchtap='selectTap'>
+                <text class='select_text'>{{selectData[index]}}</text>
+                <image class='select_img {{selectShow&&"select_img_rotate"}}' src='../../images/b2.jpg' background-size="contain"></image>
+              </view>
+              <view class='option_box' style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+                <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+              </view>
+            </view>
+          </view>
+          <van-button bind:click="createUser" class="Link" color="#07c160" size="large" block>注册</van-button>
+        </form>
+      </block>
+    </view>
+  </view>
+
+</scroll-view>

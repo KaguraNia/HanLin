@@ -1,0 +1,14 @@
+<!--pages/studentHome/studentHome.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-search value="{{ value }}" background="#f1f1f1" placeholder="搜索" />
+  <view class="container">
+    <van-empty image="search" description="当前暂无通知" />
+  </view>
+  <block>
+    <van-tabbar active="{{ active }}" bind:change="onChange">
+      <van-tabbar-item icon="search" url="../adminHome/adminHome">班级通知</van-tabbar-item>
+      <van-tabbar-item icon="home-o" url="../adApp/adApp">应用中心</van-tabbar-item>
+      <van-tabbar-item icon="friends-o" url="../adCenter/adCenter">个人中心</van-tabbar-item>
+    </van-tabbar>
+  </block>
+</scroll-view>

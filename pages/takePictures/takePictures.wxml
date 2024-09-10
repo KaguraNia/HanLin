@@ -1,0 +1,23 @@
+<!--pages/takePictures/takePictures.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+    <van-collapse-item title="请选择科目与学生" name="2" icon="flag-o" is-link="{{false}}">
+      <van-dropdown-menu active-color="#1989fa">
+        <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="change1" />
+        <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="change2" />
+      </van-dropdown-menu>
+    </van-collapse-item>
+    <van-collapse-item title="请上传试卷" icon="scan" name="1" is-link="{{false}}">
+      <!-- <view class="cccontainer">
+        <van-uploader file-list="{{ fileList }}" deletable="{{ true }}" bind:after-read="afterRead" bind:delete="bindDelete" />
+      </view> -->
+      <view class="a">
+    <van-button type="primary" block bind:click="afterClick">上传</van-button>
+
+  </view>
+    </van-collapse-item>
+
+
+  </van-collapse>
+
+</scroll-view>

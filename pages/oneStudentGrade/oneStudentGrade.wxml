@@ -1,0 +1,11 @@
+<!--pages/oneStudentGrade/oneStudentGrade.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="gr" wx:for="{{buttonList}}" wx:key="id" bindtap="buttonTapHandler" data-id="{{item.id}}">
+    <van-cell-group>
+      <van-cell title="{{item.text}}" value="查看详情" is-link />
+    </van-cell-group>
+  </view>
+  <van-divider contentPosition="center" customStyle="font-size: 12px">
+      到底了
+    </van-divider>
+</scroll-view>

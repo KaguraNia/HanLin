@@ -1,0 +1,4 @@
+/* pages/updateAI/updateAI.wxss */
+.a{
+  margin-top: 30rpx;
+}

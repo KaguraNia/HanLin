@@ -1,0 +1,22 @@
+<!--pages/studentHome/studentHome.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="stuapp"><text>系统管理</text></view>
+  <view class="gr">
+    <van-grid gutter="{{ 3 }}">
+      <van-grid-item icon="cluster" url="/pages/all/all" text="用户一览" />
+      <van-grid-item icon="friends" url="/pages/userCD/userCD" text="用户管理" />
+      <van-grid-item url='/pages/announce/announce' icon="volume" text="通知发布" />
+    </van-grid>
+  </view>
+  <view class="container">
+    <!-- <button class="button" bindtap="buttonTapHandler">历次成绩统计</button> -->
+    <block>
+      <van-tabbar active="{{ active }}" bind:change="onChange">
+        <van-tabbar-item icon="search" url="../adminHome/adminHome">班级通知</van-tabbar-item>
+        <van-tabbar-item icon="home-o" url="../adApp/adApp">应用中心</van-tabbar-item>
+        <van-tabbar-item icon="friends-o" url="../adCenter/adCenter">个人中心</van-tabbar-item>
+      </van-tabbar>
+    </block>
+  </view>
+
+</scroll-view>

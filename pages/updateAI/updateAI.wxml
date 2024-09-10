@@ -1,0 +1,9 @@
+<!--pages/updateAI/updateAI.wxml-->
+<van-cell-group>
+  <van-field label="原评语" readonly model:value="{{qqL[0].aiJR}}" placeholder="原评语加载中…" border="{{ false }}" type="textarea" autosize bind:change="onChange" />
+  <van-field label="修改后评语" model:value="{{ value }}" placeholder="请输入修改后评语" border="{{ false }}" type="textarea" autosize bind:change="onChange" />
+
+</van-cell-group>
+<view class="a">
+  <van-button icon="star-o" type="primary" block bind:click="afterClick">提交评语</van-button>
+</view>

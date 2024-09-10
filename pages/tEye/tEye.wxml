@@ -1,0 +1,49 @@
+<!--pages/tEye/tEye.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <van-collapse value="{{ activeNames }}" accordion bind:change="onChange">
+    <van-collapse-item title="班级历次总成绩" name="1">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas> </view>
+      你们班上的学生真是让人眼前一亮！无论是在语文的海洋里遨游，还是在数学的密林里探险，你们都展现出了非凡的才华和热情。
+      <view class="a"><van-rate readonly value="{{ 5 }}" color="#4bb0ff" /></view>
+    </van-collapse-item>
+    <van-collapse-item title="班级历次语文成绩" name="2">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas1" disable-scroll="true" class="canvas" bindtouchstart="touchHandler1"></canvas> </view>
+      你们班上的学生就像一群文学小达人，不仅能流畅地背诵古诗词，还能深刻理解文章背后的深意。每次讨论，你们都能发表出新颖独到的见解，忍不住为你们班同学点赞！
+      <view class="a"><van-rate readonly value="{{ 5 }}" color="#4bb0ff" /></view>
+    </van-collapse-item>
+    <van-collapse-item title="班级历次数学成绩" name="3">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas2" disable-scroll="true" class="canvas" bindtouchstart="touchHandler2"></canvas> </view>
+      数学对你们班的同学来说，仿佛就是一场智力游戏。无论是代数还是几何，都能轻松应对，解题思路既清晰又富有创意。看来，你们班的学生在数学的世界里，早已是游刃有余的高手！
+      <view class="a"><van-rate readonly value="{{ 5 }}" color="#4bb0ff" /></view>
+    </van-collapse-item>
+    <van-collapse-item title="班级历次英语成绩" name="4">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas3" disable-scroll="true" class="canvas" bindtouchstart="touchHandler3"></canvas> </view>
+      英语课上，你们班的学生更是展现出了不俗的口语和写作能力。流利的发音、准确的语法，还有那些充满创意的英文作文，都让人感受到了你们对英语的热爱和追求。
+      <view class="a"><van-rate readonly value="{{ 5 }}" color="#4bb0ff" /></view>
+    </van-collapse-item>
+    <van-collapse-item title="班级历次物理成绩" name="5">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas4" disable-scroll="true" class="canvas" bindtouchstart="touchHandler4"></canvas> </view>
+      在物理的世界里，你们班上的学生就像一群探索者，勇敢地追寻着自然界的奥秘。无论是力学还是电磁学，你们都能用科学的眼光去解释生活中的现象，真是让人佩服！
+      <view class="a"><van-rate readonly value="{{ 5 }}" color="#4bb0ff" /></view>
+    </van-collapse-item>
+    <van-collapse-item title="班级历次化学成绩" name="6">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas5" disable-scroll="true" class="canvas" bindtouchstart="touchHandler5"></canvas> </view>
+      化学对你们来说，就像是一本神秘的魔法书。你们能够熟练地掌握各种化学元素和反应，还能亲手进行实验，探索化学的奥秘。看来，你们班的学生在化学的舞台上，也能大放异彩！
+      <view class="a"><van-rate readonly value="{{ 5 }}" color="#4bb0ff" /></view>
+    </van-collapse-item>
+    <van-collapse-item title="班级历次生物成绩" name="7">
+      <view class="stuapp2"><canvas canvas-id="lineCanvas6" disable-scroll="true" class="canvas" bindtouchstart="touchHandler6"></canvas> </view>
+      生物课上，你们更是展现出了对生命的敬畏和好奇。无论是细胞的微观世界，还是生态的宏观系统，你们都能用生物学的知识去解读生命的奥秘。你们对生物学的热爱和追求，真是让人感动！
+      <view class="a"><van-rate readonly value="{{ 5 }}" color="#4bb0ff" /></view>
+    </van-collapse-item>
+    <van-collapse-item title="班级历次历史成绩" name="8">
+      <van-empty image="search" description="无数据" />
+    </van-collapse-item>
+    <van-collapse-item title="班级历次地理成绩" name="9">
+      <van-empty image="search" description="无数据" />
+    </van-collapse-item>
+    <van-collapse-item title="班级历次政治成绩" name="10">
+      <van-empty image="search" description="无数据" />
+    </van-collapse-item>
+  </van-collapse>
+</scroll-view>

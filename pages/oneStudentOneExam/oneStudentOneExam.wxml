@@ -1,0 +1,43 @@
+<!--pages/oneStudentOneExam/oneStudentOneExam.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <block>
+    <image src='http://121.37.109.0:8080/image/img/download?name=paper.jpg' class="img"></image>
+  </block>
+  <view class="gr">
+    <van-cell-group>
+      <van-cell size="large" title="{{receivedButtonText}}" icon="label" />
+      <van-collapse accordion value="{{ activeName }}" bind:change="onChange" bind:open="onOpen">
+        <van-collapse-item title="各科得分" name="1">
+          <view wx:for="{{subjectList}}" wx:key="id" data-id="{{item.id}}" class="gr">
+            <van-cell-group>
+              <van-cell title="{{item.subject}}" value="{{item.score}} / {{item.fullScore}}" />
+            </van-cell-group>
+          </view>
+        </van-collapse-item>
+        <van-collapse-item title="知识点掌握情况" name="2">
+          <view wx:for="{{knowList}}" wx:key="id" data-id="{{item.id}}" class="gr">
+            <van-cell-group>
+              <van-cell title="{{item.content}}" value="{{item.masteryDegree}}" />
+            </van-cell-group>
+          </view>
+        </van-collapse-item>
+        <van-collapse-item title="AI评阅详情" name="3">
+
+          <view wx:for="{{qList}}" wx:key="id" data-id="{{item.id}}" class="gr" bindtap="buttonTapHandler">
+
+            <van-cell-group>
+              <van-cell title="第{{item.id+1}}题" label="{{item.oQ}}" is-link url='/pages/testQList/testQList' />
+            </van-cell-group>
+          </view>
+        </van-collapse-item>
+      </van-collapse>
+    </van-cell-group>
+  </view>
+  <!-- <view>
+    <text wx:for="{{qList}}" wx:key="id" class="text-container" data-id="{{item.id}}">
+      {{item.oQ}}
+      {{item.qA}}
+      {{item.aiJR}}
+    </text>
+  </view> -->
+</scroll-view>

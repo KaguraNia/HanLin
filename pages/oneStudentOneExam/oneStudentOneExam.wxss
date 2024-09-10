@@ -1,0 +1,74 @@
+/* pages/oneStudentOneExam/oneStudentOneExam.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  font-family: '等线';
+  font-size: medium;
+}
+
+.stuapp {
+  margin-bottom: 20rpx;
+  margin-left: 50rpx;
+  font-size: 35rpx;
+  margin-top: 50rpx;
+}
+
+.img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  /* 容器使用弹性布局 */
+  justify-content: space-between;
+  /* 子项之间等距排列 */
+  flex-direction: row;
+}
+
+.exam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110rpx;
+  width: 100%;
+  margin-bottom: 100rpx;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.check {
+  padding-left: 30rpx;
+  color: #777;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column {
+  /* 左侧列的样式 */
+  width: 20%;
+  margin-left: 40rpx;
+  /* 假设我们想要左侧占45%的宽度 */
+  /* 其他左侧列特有的样式 */
+}
+
+.right-column {
+  /* 右侧列的样式 */
+  width: 60%;
+  /* 假设我们想要右侧也占45%的宽度，剩下10%作为间距 */
+  /* 其他右侧列特有的样式 */
+}
+
+
+.text-container {
+  /* 根据需要设置 text-container 的样式 */
+  margin-bottom: 10px;
+  /* 设置 text 之间的间距 */
+  text-align: left;
+}

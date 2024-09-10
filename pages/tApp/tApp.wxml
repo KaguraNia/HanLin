@@ -1,0 +1,32 @@
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="stuapp"><text>智能批卷</text></view>
+  <view class="gr">
+    <van-grid gutter="{{ 3 }}">
+      <van-grid-item icon="send-gift" text="翰林宝" bindtap="buttonTapHandler1" />
+    </van-grid>
+  </view>
+  <view class="stuapp"><text>考试一览</text></view>
+  <view class="gr">
+    <van-grid gutter="{{ 3 }}">
+      <van-grid-item url="/pages/tEye/tEye" icon="bars" text="目玉成珠" />
+      <van-grid-item url="/pages/studentGrade/studentGrade" icon="records" text="卷海诗卉" />
+    </van-grid>
+  </view>
+  <view class="stuapp"><text>发布通知</text></view>
+  <view class="gr">
+    <van-grid gutter="{{ 3 }}">
+      <van-grid-item url='/pages/announce/announce' icon="volume" text="电子小蜜蜂" />
+    </van-grid>
+  </view>
+  <view class="container">
+    <!-- <button class="button" bindtap="buttonTapHandler">历次成绩统计</button> -->
+    <block>
+      <van-tabbar active="{{ active }}" bind:change="onChange">
+        <van-tabbar-item icon="search" url="../teacherHome/teacherHome">班级通知</van-tabbar-item>
+        <van-tabbar-item icon="home-o" url="../tApp/tApp">应用中心</van-tabbar-item>
+        <van-tabbar-item icon="friends-o" url="../tCenter/tCenter">个人中心</van-tabbar-item>
+      </van-tabbar>
+    </block>
+  </view>
+
+</scroll-view>

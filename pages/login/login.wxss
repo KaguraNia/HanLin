@@ -1,0 +1,201 @@
+/**index.wxss**/
+.top {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  background: #f1f1f1;
+  font-size: medium;
+  width: 100%;
+  overflow: hidden;
+}
+
+.body {
+  font-family: '演示佛系体';
+  color: rgb(0, 0, 0);
+  font-size: 80rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+
+.log {
+  color: rgb(0, 0, 0);
+  font-size: 40rpx;
+  margin-bottom: 200rpx;
+}
+
+/* styles.wxss */
+.text-underline {
+  text-decoration: underline;
+  /* 注意：微信小程序并不直接支持 text-decoration 属性 */
+  position: relative;
+  display: inline-block;
+}
+
+.nav {
+  font-family: '等线';
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  font-size: 35rpx;
+  padding-right: 500rpx;
+  padding-top: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.yes {
+  padding-top: 60rpx;
+  padding-left: 450rpx;
+  font-size: 27rpx;
+}
+
+.yes2 {
+  padding-top: 25rpx;
+  padding-left: 426rpx;
+  font-size: 27rpx;
+}
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: '等线';
+  font-size: medium;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 80%;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.nickname-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.nickname-label {
+  width: 105px;
+}
+
+.nickname-input {
+  flex: 1;
+}
+
+.loginbutton {
+  border: 1px solid #000000;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.Link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 12px;
+  margin: 78px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+.select_box {
+  width: 45%;
+  height: 100%;
+  border-radius: 14rpx;
+  position: relative;
+  display: flex;
+}
+
+.select_box .select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+}
+
+.select_box .select .select_text {
+  color: #777777;
+  line-height: 28rpx;
+  flex: 1;
+}
+
+.select_box .select .select_img {
+  width: 30rpx;
+  height: 60rpx;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.select_box .select .select_img_rotate {
+  transform: rotate(180deg);
+}
+
+.select_box .option_box {
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  background: #f1f1f1;
+  transition: height 0.3s;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+}
+
+.select_box .option_box .option {
+  display: block;
+  line-height: 40rpx;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
